@@ -40,8 +40,21 @@ import env from '@/env';
 
 export default {
 	setup() {
+		const search = ref("");
 		const term = 'superman';
 		const movies = ref([]);
+
+		const handleSearch = () => {
+			if(search.value != "") {
+				fetch(`https://www.omdbapi.com/?apikey=${env.apikey}&s=${search.value}`)
+				.then(resp => resp.json())
+				.then(data => {
+					movies.value = data.Search.sort((a, b) => b.Year - a.Year);
+					console.log(data);
+					search.value = "";
+				})
+			}
+		}
 
 		const load = () => {
 			fetch(`https://www.omdbapi.com/?apikey=${env.apikey}&s=${term}&type=movie`)
