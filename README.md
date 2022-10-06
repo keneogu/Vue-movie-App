@@ -4,7 +4,7 @@
 
 
 ## LiveLink
-[Portfolio](https://serene-dieffenbachia-308488.netlify.app/)
+[Live Link](https://serene-dieffenbachia-308488.netlify.app/)
 
 ## Built With
 
