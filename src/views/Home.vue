@@ -18,7 +18,7 @@
 		</form>
 
 		<div class="flex flex-wrap flex-col sm:flex-row my-0 w-full sm:align-center sm:justify-center">
-			<div class="movie py-4 px-2 mt-4" :key="movie.imdbID" v-for="movie in movies">
+			<div class="movie py-4 px-2 mt-4 md:w-80" :key="movie.imdbID" v-for="movie in movies">
 				<router-link :to="'/movie/' + movie.imdbID" class="movie-link flex flex-col">
 					<div class="relative block">
 						<img :src="movie.Poster" alt="Movie Poster" class="w-full block object-fit-cover h-72">
