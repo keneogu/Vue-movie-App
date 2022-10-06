@@ -68,10 +68,17 @@ export default {
 
 		load();
 
+		const deleteMovie = (movie) => {
+			movies.value = movies.value.filter((item) => {
+				return movie !== item
+			})
+		}
+
 		return {
 			search,
 			movies,
 			handleSearch,
+			deleteMovie,
 		}
 	}
 }
